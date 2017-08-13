@@ -46,7 +46,6 @@ Shader "Custom/WorldPositionShader"
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				//float4 col = float4(1,1, i.worldPosition.y, 1);// lerp(_EndColor, _StartColor, i.worldPosition.y * _GradientBlendAmmount);
 				float4 col = lerp(_EndColor, _StartColor, i.worldPosition.y * _GradientBlendAmmount);
 				
 				return col;
