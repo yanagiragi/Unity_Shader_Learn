@@ -1,4 +1,10 @@
-﻿Shader "Custom/Refraction Invisible"
+﻿// Tutorial from 
+// "Unite Europe 2016 - A Crash Course to Writing Custom Unity Shaders!"
+
+// Special Thanks: Colin Leung for correcting my code
+// link: https://paste.ofcode.org/ShAHXKtfVdZxKukRRMDB85
+
+Shader "Custom/Refraction Invisible"
 {
 	Properties
 	{
@@ -12,6 +18,7 @@
 		Blend One Zero
 
 		GrabPass{"_GrabTexture"}
+		// Avoid using "GrabPass {}" for low performance
 
 		LOD 300
 
@@ -26,35 +33,40 @@
 			struct appdata
 			{
 				float4 vertex : POSITION;
+				float2 uv : TEXCOORD0;
 			};
 
 			struct v2f
 			{
 				float4 uvgrab : TEXCOORD0;
+				float2 uv : TEXCOORD1;
 				float4 vertex : SV_POSITION;
 			};
 
 			sampler2D _GrabTexture;
 			sampler2D _BumpMap;
-			float4 _Magnitude;
+			float _Magnitude;
 			
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uvgrab = ComputeGrabScreenPos(o.vertex);
-				
+				o.uv = v.uv;
+
 				return o;
 			}
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				half4 bump = tex2D(_BumpMap, i.uvgrab);
+				half4 bump = tex2D(_BumpMap, i.uv); // use uv instead of ubgrab to get texture color
 				half2 distortion = UnpackNormal(bump).rg;
 				
 				i.uvgrab.xy += distortion * _Magnitude;
 				
 				fixed4 col = tex2Dproj(_GrabTexture, UNITY_PROJ_COORD(i.uvgrab));
+				// alternative way:
+				// fixed4 col = tex2D(_GrabTexture, UNITY_PROJ_COORD(i.uvgrab).xy / UNITY_PROJ_COORD(i.uvgrab).ww);
 				return col;
 			}
 			ENDCG
