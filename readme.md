@@ -2,10 +2,17 @@
 
 <hr />
 
-### Credits:
+### Assets Credits:
 
 > UnityChan SD Character
 
-> <a href="https://github.com/k79k06k02k/Shader_BookClub">Shader_BookClub</a>
+> [Textures.com](https://www.textures.com/)
 
-> To Be Updated...
+
+### Tutorials are from:
+
+> [k79k06k02k/Shader_BookClub](https://github.com/k79k06k02k/Shader_BookClub)
+
+> [Unite Europe 2016 - A Crash Course to Writing Custom Unity Shaders!](https://www.youtube.com/watch?v=3penhrrKCYg)
+
+> [遊戲大師天堂路：只有Unity Shader才能超越Unity](http://www.books.com.tw/products/0010739461)
