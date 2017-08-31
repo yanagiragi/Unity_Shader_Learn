@@ -21,6 +21,21 @@
 
 ### Previews:
 
+<img src="./_img/0.png" width=500px>
+
+Direction Offset, Streamer Color, Fade, Outline(Normal),
+
+Direction Offset + Streamer Color, ZTest, Mask Texture Clip + Direction Offset,
+
+Dissolve, Refraction Invisible, World Position, Ramp,
+
+Bump, Noise, Mosaic
+
+<img src="./_img/4.png" width=500px>
+
+(Diffuse in vertex level, Diffuse in pixel level, Half Lambert, Specular in vertex level, Specular in pixe; level, Blinn-Phong)
+
+<!--
 <img src="./_img/1.png" width=500px>
 
 (Direction Offset, Streamer Color, Fade, Outline(Normal))
@@ -40,3 +55,4 @@
 <img src="./_img/5.png" width=500px>
 
 (Ramp, Bump, Noise, Mosaic)
+-->
