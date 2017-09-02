@@ -81,5 +81,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # Avoid License
-UnityChan/
 Assets/Resources/Textures/*
+Assets/Resources/Models/*
+
