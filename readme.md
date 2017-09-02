@@ -19,6 +19,9 @@
 
 > [阿祥的開發日常](https://tedsieblog.wordpress.com/)
 
+> [
+【浅墨Unity3D Shader编程】](http://blog.csdn.net/zhmxy555/article/list/1)
+
 ### Previews:
 
 <img src="./_img/0.png" width=500px>
