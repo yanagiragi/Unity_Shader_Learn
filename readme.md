@@ -111,8 +111,7 @@
 
 <br />
 
-<img src="./_img/AlphaBlendArtifacts.png" width=225px>
-<img src="./_img/AlphaBlendZTestArtifacts.png" width=500px>
+<img src="./_img/AlphaBlendArtifacts.png" width=300px> <img src="./_img/AlphaBlendZTestArtifacts.png" width=550px>
 
 * Alpha Series Artifacts: (Alpha Blend + Double Pass is Recommended!)
 
@@ -124,7 +123,7 @@
 
 <br />
 
-<img src="./_img/LightTest.png">
+<img src="./_img/lightTest.png">
 
 * Basic Lightning vertex fragment Shader (implemented with Bling-Phong)
 
