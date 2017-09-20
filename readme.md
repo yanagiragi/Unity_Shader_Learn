@@ -85,7 +85,7 @@
 
 * From Left to Right :
 
-    * Single Vertex Fragment
+    * Single Texture (Texture + Bling-Phong)
 
     * Normal in tangent space
 
