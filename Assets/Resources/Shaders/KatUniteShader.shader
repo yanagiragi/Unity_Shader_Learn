@@ -1,4 +1,6 @@
-﻿// Tutorals from
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Tutorals from
 // "Unite Europe 2016 - A Crash Course to Writing Custom Unity Shaders!"
 
 Shader "Custom/KatUniteShader"
@@ -54,7 +56,7 @@ Shader "Custom/KatUniteShader"
 				// _Time.y stands for actual time
 				v.vertex.xyz += v.normal.xyz * _ExtrudeAmmount * sin(_Time.y);
 
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				o.uv = v.uv;
 				

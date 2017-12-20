@@ -1,4 +1,6 @@
-﻿Shader "Custom/DirectionOffset" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/DirectionOffset" {
 	Properties {
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Scale ("Scale", Range(0,0.025)) = 0.0125
@@ -30,7 +32,7 @@
 			v2f vert(appdata v){
 				v2f o;
 				v.vertex.xyz += v.normal * _Scale;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
 				return o;
 			}

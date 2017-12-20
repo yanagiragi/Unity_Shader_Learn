@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
 Shader "Unity Shaders Book/Chapter 6/Diffuse Pixel-Level" {
 	
@@ -37,7 +39,7 @@ Shader "Unity Shaders Book/Chapter 6/Diffuse Pixel-Level" {
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				
 				o.worldNormal = normalize(mul(v.normal, (float3x3) unity_WorldToObject));
 

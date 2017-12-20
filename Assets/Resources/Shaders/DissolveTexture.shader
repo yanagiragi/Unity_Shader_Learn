@@ -1,4 +1,6 @@
-﻿// Tutorals from
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Tutorals from
 // "Unite Europe 2016 - A Crash Course to Writing Custom Unity Shaders!"
 
 Shader "Custom/DissoveTexture"
@@ -51,7 +53,7 @@ Shader "Custom/DissoveTexture"
 			{
 				v2f o;
 				
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				o.uv = v.uv;
 				

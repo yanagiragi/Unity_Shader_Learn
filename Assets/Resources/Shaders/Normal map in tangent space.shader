@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 7/Normal map in tangent space" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 7/Normal map in tangent space" {
 	// non-linear calculate specular
 	Properties {
 		_MainTex ("Main Texture", 2D) = "white" {}
@@ -51,7 +53,7 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				o.uv.xy = v.uv.xy * _MainTex_ST.xy + _MainTex_ST.zw; // or o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 

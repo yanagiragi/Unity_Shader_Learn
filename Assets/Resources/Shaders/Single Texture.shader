@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 7/Single Texture" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 7/Single Texture" {
 	// non-linear calculate specular
 	Properties {
 		_MainTex ("Main Texture", 2D) = "white" {}
@@ -45,7 +47,7 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				// change to same coodinate system of light direction so that dot is meaningful
 				o.worldNormal = mul(v.normal, (float3x3) unity_WorldToObject);

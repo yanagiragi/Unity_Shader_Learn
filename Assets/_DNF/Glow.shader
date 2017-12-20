@@ -1,4 +1,6 @@
-﻿Shader "Test/Glow" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Test/Glow" {
 	
 	Properties{
 		_MainTex("Texture", 2D) = "white" {}
@@ -35,7 +37,7 @@
 
 			v2f vert(vertIn v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.pos);
+				o.pos = UnityObjectToClipPos(v.pos);
 				o.tex = v.tex * _MainTex_ST.xy + _MainTex_ST.zw;
 				return o;
 			}

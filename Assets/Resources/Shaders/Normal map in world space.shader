@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 Shader "Unity Shaders Book/Chapter 7/Normal map in world space" {
 	// non-linear calculate specular
@@ -54,7 +56,7 @@ Shader "Unity Shaders Book/Chapter 7/Normal map in world space" {
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				o.uv.xy = v.uv.xy * _MainTex_ST.xy + _MainTex_ST.zw; // or o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 

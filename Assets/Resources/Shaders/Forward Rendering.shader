@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_LightMatrix0' with 'unity_WorldToLight'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_LightMatrix0' with 'unity_WorldToLight'
 
 Shader "Unity Shaders Book/Chapter 9/Forward Rendering" {
 	Properties {
@@ -41,7 +43,7 @@ Shader "Unity Shaders Book/Chapter 9/Forward Rendering" {
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				// change to same coodinate system of light direction so that dot is meaningful
 				o.worldNormal = mul(v.normal, (float3x3) unity_WorldToObject);
@@ -118,7 +120,7 @@ Shader "Unity Shaders Book/Chapter 9/Forward Rendering" {
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				// change to same coodinate system of light direction so that dot is meaningful
 				o.worldNormal = mul(v.normal, (float3x3) unity_WorldToObject);

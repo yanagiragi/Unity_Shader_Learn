@@ -1,4 +1,6 @@
-﻿Shader "Custom/DirectionOffsetClamp"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/DirectionOffsetClamp"
 {
 	Properties {
 		_MainTex("Texture", 2D) = "white"{}
@@ -46,7 +48,7 @@
 					o.color = fixed4(1,1,1,1);
 				}
 				
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
 				return o;
 			}

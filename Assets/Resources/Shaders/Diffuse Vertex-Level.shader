@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
 Shader "Unity Shaders Book/Chapter 6/Diffuse Vertex-Level" {
 	// for low detail mesh, jagged
@@ -39,7 +41,7 @@ Shader "Unity Shaders Book/Chapter 6/Diffuse Vertex-Level" {
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
 
