@@ -93,6 +93,7 @@ Shader "Unity Shaders Book/Chapter 9/Attenuation And Shadow Use Built In Functio
 		{
 			Tags { "LightMode"="ForwardAdd" }
 			Blend One One
+			//Blend One One
 		
 			CGPROGRAM
 			#pragma multi_compile_fwdadd_fullshadows

@@ -42,10 +42,11 @@ Shader "Unity Shaders Book/Chapter 10/Reflect"
 				float3 worldNormal : TEXCOORD0;
 				float3 worldRefl : TEXCOORD1;
 				float3 worldPos : TEXCOORD2;
-				SHADOW_COORDS(4)
+				SHADOW_COORDS(3)
 			};
 
 			float4 _Color;
+			float _Gloss;
 			float4 _ReflectColor;
 			fixed _ReflectAmount;
 			samplerCUBE _Cubemap;
