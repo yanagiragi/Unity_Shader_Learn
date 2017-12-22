@@ -23,7 +23,7 @@ public class CaptureScreenShot : MonoBehaviour {
 
 			filename += ".png";
 			Debug.Log (string.Format("Capture ScreenShot {0}", filename));
-			//ScreenCapture.CaptureScreenshot (filename, superSize);
+			ScreenCapture.CaptureScreenshot (filename, superSize);
 		}
 	}
 }
