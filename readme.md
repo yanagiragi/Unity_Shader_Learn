@@ -153,11 +153,35 @@
 
 <br />
 
-<!--
-<img src="./_img/SpriteAnimation.png" height=360px>
+
+<img src="./_img/SpriteAnimation.gif" height=360px>
 
 * 2D Sprite Animation
 
-    // To Be Done...
+<br />  
 
--->
+<img src="./_img/13271.png" height=360px>
+
+* Fresnel & Reflect & Refract & Glass Effect
+
+    * Glass Effect implemented by Conbine bump, refract, reflect, uv shift
+
+<br />
+
+<img src="./_img/fresnel.png" height=360px>
+
+* Comparsion to Reflect & Frensel
+
+<br />
+
+<img src="./_img/562849.png" height=360px>
+
+* Trying to make refelct more realistic
+
+    * Trying Combining Lambertian with Reflect
+
+    * I use Diffuse * Lerp(Diffuse + specular, ReflColor) to approach, however there might be a better solution
+
+    * Shadow artifacts due to bias (Unity can only increase bias to 2!)
+
+<br />
