@@ -76,7 +76,6 @@ Shader "Unity Shaders Book/Chapter 11/Billboard"
 			}
 			ENDCG
 		}
-
 	}
 	Fallback "Transparent/VertexLit"
 }
