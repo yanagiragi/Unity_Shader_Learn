@@ -83,4 +83,5 @@ $RECYCLE.BIN/
 # Avoid License
 Assets/Resources/Textures/*
 Assets/Resources/Models/*
+Assets/Resources/ShaderBookResources/*
 
