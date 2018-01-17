@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EdgeDetection : PostEffectsBase {
 
-
     public Shader edgeShader;
     private Material edgeMaterial;
 
