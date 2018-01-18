@@ -48,7 +48,7 @@ Shader "Custom/DirectionOffsetClamp"
 					o.color = fixed4(1,1,1,1);
 				}
 				
-				o.vertex = UnityObjectToClipPos(v.vertex);
+				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.uv = v.uv;
 				return o;
 			}

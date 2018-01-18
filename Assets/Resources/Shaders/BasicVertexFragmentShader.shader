@@ -31,7 +31,7 @@ Shader "Custom/BasicVertexFragmentShader" {
 
 			v2f vert(appdata v){
 				v2f o;
-				o.vertex = UnityObjectToClipPos(v.vertex);
+				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.uv = v.uv;
 
 				return o;

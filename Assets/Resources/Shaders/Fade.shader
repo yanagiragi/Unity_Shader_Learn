@@ -39,7 +39,7 @@ Shader "Custom/Fade"
 			{
 				v2f o;
 				o.uv = v.uv;
-				o.vertex = UnityObjectToClipPos(v.vertex);
+				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				return o;
 			}
 			
