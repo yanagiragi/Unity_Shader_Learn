@@ -18,9 +18,15 @@
 
 > [遊戲大師天堂路：只有Unity Shader才能超越Unity](http://www.books.com.tw/products/0010739461)
 
+> [《Unity Shader入门精要》源代码](https://github.com/candycat1992/Unity_Shaders_Book)
+
 > [阿祥的開發日常](https://tedsieblog.wordpress.com/)
 
 > [【浅墨Unity3D Shader编程】](http://blog.csdn.net/zhmxy555/article/list/1)
+
+> [巴哈姆特 kilufodo](https://home.gamer.com.tw/homeindex.php?owner=kilufodo)
+
+> [vux427/ForceFieldFX](https://github.com/vux427/ForceFieldFX)
 
 <br />
 
@@ -183,5 +189,41 @@
     * I use Diffuse * Lerp(Diffuse + specular, ReflColor) to approach, however there might be a better solution
 
     * Shadow artifacts due to bias (Unity can only increase bias to 2!)
+
+<br />
+
+<img src="./_img/shield.gif" height=360px>
+
+* Shield Effects
+
+<br />
+
+<img src="./_img/post.gif" height=360px>
+
+* Some Post Processing Effects
+
+    * (Shown in gif) Brightness, Luminance, Contrast, Gaussian Blur, Bloom, Sobel edge detection
+
+    * (Not Shown in gif) Motion Blur (Use Depth map or not), alternate edge detection using depth map, fog
+
+<br />
+
+
+
+<img src="./_img/dissolve+bloom.gif" height=360px>
+
+* Dissolve + Bloom + Brightness & Contrast
+
+<br />
+
+<img src="./_img/water.gif" height=360px>
+
+* Water Effect using noise with refraction
+
+<br />
+
+<img src="./_img/water+fog.gif" height=360px>
+
+* Water Effect using noise with refraction + Screen space fog using noise & depth map
 
 <br />
