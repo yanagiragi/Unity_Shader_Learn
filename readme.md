@@ -196,12 +196,6 @@
 
 <br />
 
-<img src="./_img/shield.gif" height=360px>
-
-* Shield Effects
-
-<br />
-
 <img src="./_img/post.gif" height=360px>
 
 * Some Post Processing Effects
@@ -212,7 +206,15 @@
 
 <br />
 
+<img src="./_img/hatching.png" height=360px>
 
+* Hatching Effect & Toon Shading
+
+    * Hatching is simple version of [Matthew Webb, Emil Praun,Adam Finkelstein and Hugues Hoppe, Fine Tone Control in Hardware Hatching, SIGGRAPH, 2001]
+
+    * Toon Shading is simpling outline + ramp
+
+<br />
 
 <img src="./_img/dissolve+bloom.gif" height=360px>
 
@@ -228,6 +230,19 @@
 
 <img src="./_img/water+fog.gif" height=360px>
 
-* Water Effect using noise with refraction + Screen space fog using noise & depth map
+* Screen space fog using noise & depth map
+
+<br />
+
+<img src="./_img/shield.gif" height=360px>
+
+* Shield Effects
+
+<br />
+
+
+<img src="./_img/stockingize.png" height=360px>
+
+* Stockingize Effect to create Stocking
 
 <br />
