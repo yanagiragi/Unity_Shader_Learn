@@ -28,6 +28,10 @@
 
 > [vux427/ForceFieldFX](https://github.com/vux427/ForceFieldFX)
 
+> [【足控福利】丝袜化MME【绅士必入】](http://tieba.baidu.com/p/3159024840)
+
+> [ストッキングっぽい陰影を付けるエフェクト (上面那個沒有被修改過的原版)](https://bowlroll.net/file/7586)
+
 <br />
 
 # Previews:

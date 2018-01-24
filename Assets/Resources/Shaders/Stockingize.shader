@@ -7,8 +7,8 @@
 		_Diffuse ("Diffuse", Color) = (1,1,1,1)
 		_Specular ("Specular", Color) = (1,1,1,1)
 		_Gloss ("Gloss", Range(8.0, 256)) = 20
-		_GAUSSIAN_A("Denier", Range(0.1, 10)) = 1
-		_GAUSSIAN_SIGMA("Gradation", Range(0.1, 10)) = 1.4		
+		_GAUSSIAN_A("Denier", Range(0.1, 1)) = 1
+		_GAUSSIAN_SIGMA("Gradation", Range(0.1, 2.3)) = 1.4		
 	}
 	SubShader
 	{
