@@ -234,14 +234,14 @@
 
 <br />
 
-<img src="./_img/shield.gif" height=360px>
+<img src="./_img/Shield.gif" height=360px>
 
 * Shield Effects
 
 <br />
 
 
-<img src="./_img/stockingize.png" height=360px>
+<img src="./_img/Stockingize.png" height=360px>
 
 * Stockingize Effect to create Stocking
 
