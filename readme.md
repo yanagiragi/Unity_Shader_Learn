@@ -32,6 +32,8 @@
 
 > [ストッキングっぽい陰影を付けるエフェクト (上面那個沒有被修改過的原版)](https://bowlroll.net/file/7586)
 
+> [keijiro/KinoGlitch](https://github.com/keijiro/KinoGlitch)
+
 <br />
 
 # Previews:
