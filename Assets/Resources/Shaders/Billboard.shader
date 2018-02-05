@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
 Shader "Unity Shaders Book/Chapter 11/Billboard"
 {
@@ -61,7 +63,7 @@ Shader "Unity Shaders Book/Chapter 11/Billboard"
 				float3 centerOffs = v.vertex.xyz - center;
 				float3 localPos = center + rightDir * centerOffs.x + upDir * centerOffs.y + normalDir * centerOffs.z;
 				
-				o.vertex = mul(UNITY_MATRIX_MVP, float4(localPos, 1));
+				o.vertex = UnityObjectToClipPos(float4(localPos, 1));
 
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				return o;

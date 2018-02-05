@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 15/Water"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 15/Water"
 {
 	Properties
 	{
@@ -63,7 +65,7 @@
 			v2f vert (a2v v)
 			{
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				o.scrPos = ComputeGrabScreenPos(o.pos);
 				o.uv.xy = TRANSFORM_TEX(v.uv, _MainTex);
 				o.uv.zw = TRANSFORM_TEX(v.uv, _WaveMap);

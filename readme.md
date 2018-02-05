@@ -1,5 +1,7 @@
 # Unity_Shader_Learn
 
+Unity Version: 2017.2.1f1
+
 <hr />
 
 ## Assets Credits:
@@ -33,6 +35,16 @@
 > [ストッキングっぽい陰影を付けるエフェクト (上面那個沒有被修改過的原版)](https://bowlroll.net/file/7586)
 
 > [keijiro/KinoGlitch](https://github.com/keijiro/KinoGlitch)
+
+> [Wave Propagation Effect](https://www.shadertoy.com/view/Xsd3DB)
+
+> [Finite Water](https://www.shadertoy.com/view/4sd3WB)
+
+> [ya7gisa0/Unity-Wave-Propagation-Water-Ripple](https://github.com/ya7gisa0/Unity-Wave-Propagation-Water-Ripple) (However I suggest to use this [version](https://github.com/yanagiragi/Unity-Wave-Propagation-Water-Ripple))
+
+> [ぬるてかシェーダー(dAdultsShader)](https://bowlroll.net/file/16903)
+
+> [MME-Black-Rock-Shooter-Sexy-Lotion-Shader(上面那個Shader英文化的版本)](https://harryhack91.deviantart.com/art/MME-Black-Rock-Shooter-Sexy-Lotion-Shader-478042653)
 
 <br />
 
@@ -251,5 +263,17 @@
 <img src="./_img/Stockingize.png" height=360px>
 
 * Stockingize Effect to create Stocking
+
+<br />
+
+<img src="./_img/wavePropagation.gif" height=360px>
+
+* Screen Space Wave Propagation Effect
+
+<br />
+
+<img src="./_img/Lotion.png" height=360px>
+
+* Lotion Effects
 
 <br />

@@ -1,4 +1,6 @@
-﻿Shader "Hidden/Gaussian Blur"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Hidden/Gaussian Blur"
 {
 	Properties
 	{
@@ -25,7 +27,7 @@
 		{
 			v2f o;
 
-			o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.vertex = UnityObjectToClipPos(v.vertex);
 
 			half2 uv = v.texcoord;
 
@@ -42,7 +44,7 @@
 		{
 			v2f o;
 
-			o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.vertex = UnityObjectToClipPos(v.vertex);
 
 			half2 uv = v.texcoord;
 

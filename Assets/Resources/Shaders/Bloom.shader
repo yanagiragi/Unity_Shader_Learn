@@ -1,4 +1,6 @@
-﻿Shader "Hidden/Bloom"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Hidden/Bloom"
 {
 	Properties
 	{
@@ -27,7 +29,7 @@
 		v2f vertExtractBright(appdata_img v)
 		{
 			v2f o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			o.uv = v.texcoord;
 			return o;
 		}
@@ -54,7 +56,7 @@
 		{
 			v2fBloom o;
 
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			o.uv.xy = v.texcoord;
 			o.uv.zw = v.texcoord;
 
