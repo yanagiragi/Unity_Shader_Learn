@@ -93,8 +93,7 @@ Shader "Unity Shaders Book/Chapter 9/Attenuation And Shadow Use Built In Functio
 		{
 			Tags { "LightMode"="ForwardAdd" }
 			Blend One One
-			//Blend One One
-		
+			
 			CGPROGRAM
 			#pragma multi_compile_fwdadd_fullshadows
 			#pragma vertex vert
@@ -112,7 +111,7 @@ Shader "Unity Shaders Book/Chapter 9/Attenuation And Shadow Use Built In Functio
 
 			struct v2f
 			{
-				float4 vertex : SV_POSITION;
+				float4 pos : SV_POSITION;
 				fixed3 worldNormal : TEXCOORD0;
 				fixed3 worldPos : TEXCOORD1;
 				SHADOW_COORDS(2)
@@ -125,7 +124,7 @@ Shader "Unity Shaders Book/Chapter 9/Attenuation And Shadow Use Built In Functio
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = UnityObjectToClipPos(v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 
 				// change to same coodinate system of light direction so that dot is meaningful
 				o.worldNormal = mul(v.normal, (float3x3) unity_WorldToObject);

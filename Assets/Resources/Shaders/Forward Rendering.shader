@@ -152,12 +152,13 @@ Shader "Unity Shaders Book/Chapter 9/Forward Rendering" {
 				
 				fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(worldNormal, halfDirection)), _Gloss);
 
-				#ifdef USING_DIRECTIONAL_LIGHT
+				/*#ifdef USING_DIRECTIONAL_LIGHT
 					fixed atten = 1.0;
 				#else
 					float3 lightCoord = mul(unity_WorldToLight, float4(i.worldPos, 1)).xyz;
 					fixed atten = tex2D(_LightTexture0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
-				#endif 
+				#endif */
+				UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
 
 				fixed3 color = (diffuse + specular) * atten;
 

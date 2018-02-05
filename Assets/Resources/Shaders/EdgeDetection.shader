@@ -11,13 +11,13 @@
 	{
 		// No culling or depth
 		Cull Off ZWrite Off ZTest Always
-
+		
 		Pass
 		{
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment fragSobel
-			
+			#pragma exclude_renderers d3d11_9x	
 			#include "UnityCG.cginc"
 
 			struct appdata

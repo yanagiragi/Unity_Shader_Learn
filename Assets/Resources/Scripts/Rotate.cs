@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotate : MonoBehaviour {
-    public Vector3 Speed;
+public class Rotate : MonoBehaviour
+{
 
-    private float frame;
+    public float smoothFactor = 1;
+    public Vector3 axis;
+    float time = 0;
 
-	void Start () {
-        frame = 0;
-	}
-	
-	void Update () {
-        ++frame;
-        transform.localRotation = Quaternion.Euler(new Vector3(Speed.x * frame, Speed.y * frame, Speed.z * frame));
-	}
+    void Start()
+    {
+        time = 0;
+    }
+
+    void Update()
+    {
+        time += Time.deltaTime * smoothFactor;
+
+        transform.localRotation = Quaternion.Euler(axis.x * time, axis.y * time, axis.z * time);
+    }
 }
