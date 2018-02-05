@@ -274,6 +274,6 @@ Unity Version: 2017.2.1f1
 
 <img src="./_img/Lotion.png" height=360px>
 
-* Lotion Effects
+* Lotion Effects (See original size screenshot for checking it's effect)
 
 <br />
