@@ -46,6 +46,10 @@ Unity Version: 2017.2.1f1
 
 > [MME-Black-Rock-Shooter-Sexy-Lotion-Shader(上面那個Shader英文化的版本)](https://harryhack91.deviantart.com/art/MME-Black-Rock-Shooter-Sexy-Lotion-Shader-478042653)
 
+> [水面を作ってみた](http://esprog.hatenablog.com/entry/2018/01/10/000942)
+
+> [EsProgram/WaveShaderDemo](https://github.com/EsProgram/WaveShaderDemo)
+
 <br />
 
 # Previews:
@@ -275,5 +279,11 @@ Unity Version: 2017.2.1f1
 <img src="./_img/Lotion.png" height=360px>
 
 * Lotion Effects (See original size screenshot for checking it's effect)
+
+<br />
+
+<img src="./_img/wave.gif" height=360px>
+
+* Wave Effect with collision and reflect surface
 
 <br />

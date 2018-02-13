@@ -80,8 +80,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Avoid License
+# Avoid License Issue
 Assets/Resources/Textures/*
 Assets/Resources/Models/*
 Assets/Resources/ShaderBookResources/*
-
+Assets/Resources/ShaderBookResources/*
+Assets/Resources/Es Wave Shader/InkPainter/*
