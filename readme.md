@@ -52,6 +52,8 @@ Unity Version: 2017.2.1f1
 
 > [Flafla2/Generic-Raymarch-Unity](https://github.com/Flafla2/Generic-Raymarch-Unity)
 
+> [puppet_master的专栏 (CSDN)](https://blog.csdn.net/puppet_master)
+
 <br />
 
 # Previews:

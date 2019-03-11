@@ -84,5 +84,8 @@ $RECYCLE.BIN/
 Assets/Resources/Textures/*
 Assets/Resources/Models/*
 Assets/Resources/ShaderBookResources/*
-Assets/Resources/ShaderBookResources/*
 Assets/Resources/Es Wave Shader/InkPainter/*
+Assets/Standard Assets/*
+
+# vs code
+.vs/*
