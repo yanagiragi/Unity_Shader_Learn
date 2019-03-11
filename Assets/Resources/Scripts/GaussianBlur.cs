@@ -42,19 +42,21 @@ public class GaussianBlur : PostEffectsBase {
 
                 RenderTexture buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);
 
+                // vertical pass
                 Graphics.Blit(buffer0, buffer1, material, 0);
 
                 RenderTexture.ReleaseTemporary(buffer0);
                 buffer0 = buffer1;
                 buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);
 
+                // horiztonal pass
                 Graphics.Blit(buffer0, buffer1, material, 1);
 
                 RenderTexture.ReleaseTemporary(buffer0);
                 buffer0 = buffer1;
             }
 
-            // Honrizontal Pass
+            // Bilt to Screen
             Graphics.Blit(buffer0, destination);
             RenderTexture.ReleaseTemporary(buffer0);
         }
