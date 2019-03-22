@@ -4,7 +4,7 @@
     {
         _MainTex ("Main Texture", 2D) = "white" {}
 		_NoiseTex("Noise Map", 2D) = "white" {}
-    }
+	}
 
 	CGINCLUDE
 
@@ -28,8 +28,12 @@
 	{
 		float4 noise = tex2D(_NoiseTex, i.uv - _Time.xy * _DistortionTimeFactor);
 		float2 offset = noise.xy * _DistortionStrength;
-		float2 uv = offset * tex2D(_MaskTex, i.uv).r + i.uv;
-		//return float4(tex2D(_MaskTex, i.uv).rrrr);
+		float4 mask = tex2D(_MaskTex, i.uv);
+
+		float2 uv = offset * mask.r + i.uv;		
+
+		//return float4(mask);
+		//return tex2D(_MainTex, uv) * mask.rrrr;
 		return tex2D(_MainTex, uv);
 	}
 

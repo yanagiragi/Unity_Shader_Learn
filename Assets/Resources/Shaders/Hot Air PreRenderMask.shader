@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
 Shader "Hidden/HotAirPreRenderMask"
 {
@@ -21,6 +23,7 @@ Shader "Hidden/HotAirPreRenderMask"
 			struct v2f
 			{
 				float4 pos : SV_POSITION;
+				float2 uv : TEXCOORD0;
 			};
 
 			#pragma vertex vert
@@ -29,28 +32,17 @@ Shader "Hidden/HotAirPreRenderMask"
 			v2f vert(appdata_full v)
 			{
 				v2f o;
-				
-				// Billboard
-				float3 center = float3(0, 0, 0);
-				float3 viewer = mul(unity_WorldToObject, float4(_WorldSpaceCameraPos, 1));
-
-				float3 normalDir = viewer - center;
-				normalDir = normalize(normalDir);
-
-				float3 upDir = abs(normalDir.y) > 0.999 ? float3(0, 0, 1) : float3(0, 1, 0);
-				float3 rightDir = normalize(cross(upDir, normalDir));
-				upDir = normalize(cross(normalDir, rightDir));
-
-				float3 centerOffs = v.vertex.xyz - center;
-				float3 localPos = center + rightDir * centerOffs.x + upDir * centerOffs.y + normalDir * centerOffs.z;
-
-				o.pos = UnityObjectToClipPos(float4(localPos, 1));
+				o.pos = UnityObjectToClipPos(v.vertex);
+				o.uv = v.texcoord;
 				return o;
 			}
 
 			fixed4 frag(v2f i) : SV_Target
 			{
-				return fixed4(1,1,1,1);
+				fixed mask = 1 - length(i.uv.xy * 2 - 1);
+				mask = pow(mask, 2);
+				
+				return fixed4(mask, mask, mask,1);
 			}
 
 			ENDCG

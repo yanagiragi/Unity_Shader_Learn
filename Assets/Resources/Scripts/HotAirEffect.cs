@@ -21,7 +21,7 @@ public class HotAirEffect : PostEffectsBase
     private Camera additionalCam;
 
     private RenderTexture mask;
-
+    
     public Material material
     {
         get
