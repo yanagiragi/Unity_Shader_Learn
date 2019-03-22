@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class DoFDemo : MonoBehaviour
 {
+    public FocusDistanceManger focalManager;
     public Material BlueMaterial;
     public Material RedMaterial;
+
+    public Camera mainCam;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {
 
                 StartCoroutine(ClickAnim(hit.collider.gameObject));
 
-                DepthOfField dof = GetComponent<DepthOfField>();
-                if (dof) {
-                    float distance = hit.collider.gameObject.transform.position.z - transform.position.z;
-                    dof.focalDistance = distance;
-                }
+                float distance = hit.collider.gameObject.transform.position.z - transform.position.z;
+                focalManager.distance = distance;
             }
         }
     }
