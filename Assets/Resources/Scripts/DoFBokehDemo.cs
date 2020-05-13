@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoFDemo : MonoBehaviour
+public class DoFBokehDemo : MonoBehaviour
 {
     public FocusDistanceManger focalManager;
     public Material BlueMaterial;
     public Material RedMaterial;
+
+    public ApproximateBokeh bokeh;
+    public DepthOfField dof;
 
     public Camera mainCam;
 
@@ -32,5 +35,19 @@ public class DoFDemo : MonoBehaviour
         g.GetComponent<Renderer>().material = RedMaterial;
         yield return new WaitForSeconds(.2f);
         g.GetComponent<Renderer>().material = BlueMaterial;
+    }
+
+    public void Swap()
+    {
+        if (bokeh.enabled)
+        {
+            dof.enabled = true;
+            bokeh.enabled = false;
+        }
+        else
+        {
+            dof.enabled = false;
+            bokeh.enabled = true;
+        }
     }
 }
