@@ -81,6 +81,9 @@
 				fixed3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.worldPos.xyz);
 				fixed3 halfDirection = normalize(viewDirection + worldLightDirection);
 
+				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
+				fixed3 worldLight = normalize(_WorldSpaceLightPos0.xyz);
+				fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * max(dot(worldNormal, worldLightDirection), 0);
 				fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(worldNormal, halfDirection)), _Gloss);
 
 				float u = 1 - Gaussian(dot(viewDir, worldNormal));
@@ -89,7 +92,6 @@
 				fixed4 Color = tex2D(_MainTex, i.uv) + fixed4(specular, 1.0);
 		
 				fixed4 finalColor = AlphaBlend(Color, StockingColor);
-							
 				return finalColor;
 			}
 			ENDCG
