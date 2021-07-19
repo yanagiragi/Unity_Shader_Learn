@@ -68,8 +68,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Lotion.unity
     guid: 11d78fc5a4425864da95c86564bc6eac
-  - enabled: 1
-    path: Assets/_Scenes/Wave Propagation.unity
+  - enabled: 0
+    path: Assets/_Scenes/Wave Propagation (WIP).unity
     guid: db6fa6dace4eb474ca169dcd1e9a4c39
   - enabled: 1
     path: Assets/_Scenes/Es Wave Shader.unity
