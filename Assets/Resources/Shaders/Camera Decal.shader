@@ -2,23 +2,23 @@
 {
     Properties
     {
-		_Color("Main Color", Color) = (1,1,1,1)
+		[Hdr] _Color("Main Color", Color) = (1,1,1,1)
 		_DecalTex("Cookie", 2D) = "" {}
     }
     SubShader
     {
-        ZWrite Off
-		ColorMask RGB
-		Fog { Color(0,0,0) }
-		Blend SrcAlpha OneMinusSrcAlpha
-		// Force Draw Above Object, Avoid Z-Fighting
-		// https://docs.unity3d.com/Manual/SL-CullAndDepth.html
-		// Offset 0, -1 pulls the polygon closer to the camera ignoring the polygon’s slope
-		// Offset -1, -1 will pull the polygon even closer when looking at a grazing angle.
-		Offset -1, -1
-
         Pass
         {
+
+            ZWrite Off
+            ColorMask RGB
+            Blend DstColor One
+            // Force Draw Above Object, Avoid Z-Fighting
+            // https://docs.unity3d.com/Manual/SL-CullAndDepth.html
+            // Offset 0, -1 pulls the polygon closer to the camera ignoring the polygon’s slope
+            // Offset -1, -1 will pull the polygon even closer when looking at a grazing angle.
+            Offset -1, -1
+
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
