@@ -2,7 +2,7 @@
 // https://www.shadertoy.com/view/4sd3WB
 // https://www.shadertoy.com/view/Xsd3DB
 
-Shader "Custom/Wave" {
+Shader "Custom/Wave (ShaderToy)" {
 	Properties {
 		_MainTex("Albedo (RGB)", 2D) = "white" {}
 		_RippleRadius ("Ripple Radius", Range(0,0.3)) = 0.05

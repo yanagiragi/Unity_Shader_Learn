@@ -1,4 +1,4 @@
-﻿Shader "Custom/Wave"
+﻿Shader "Custom/Wave (InkPainter)"
 {
 	Properties
 	{
@@ -54,7 +54,7 @@
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				// Solve 波動方程式
+				// Solve wave equation
 				
 				// stride = (DeltaX, DeltaY)
 				float2 stride = float2(_Stride, _Stride) * _PrevTex_TexelSize.xy;
