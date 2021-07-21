@@ -86,4 +86,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Hot Air.unity
     guid: a4f5003395e882e44a3452118f310118
+  - enabled: 1
+    path: Assets/Organized/WarpSpeed/_Scenes/WarpSpeedImageEffect.unity
+    guid: 3639694db509a204890b04064279fadc
+  - enabled: 1
+    path: Assets/Organized/VolumetricLight/_Scenes/VolumetricLightDemo.unity
+    guid: fe2591a1154662746863cc83982cd728
+  - enabled: 1
+    path: Assets/Organized/FanboxCard/_Scenes/FanboxCard (Empty).unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Organized/FanboxCard/_Scenes/FanboxCard (Texture).unity
+    guid: 78617c1ce075b634a9a889c8a1b57d3b
+  - enabled: 1
+    path: Assets/Organized/FanboxCard/_Scenes/Line Pattern (sine).unity
+    guid: 23b0e0b2e17108a42a3184e0aba040ee
+  - enabled: 1
+    path: Assets/Organized/FanboxCard/_Scenes/Line Pattern (smoothStep).unity
+    guid: ccf13ebe350161b4dac8df24466717d9
   m_configObjects: {}
