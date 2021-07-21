@@ -135,21 +135,13 @@
 	{
 		v2f o;
 
-		/*half index = v.vertex.z;
-		v.vertex.z = 0.1;*/
-
 		o.vertex = UnityObjectToClipPos(v.vertex);
 		o.uv = v.texcoord;
-
-		/*o.ray = _FrustumCornersES[(int)index].xyz;
-		o.ray /= abs(o.ray.z);
-		o.ray = mul(_CameraInvViewMatrix, o.ray);*/
 
 		//transform clip pos to view space
 		float4 clipPos = float4(v.texcoord * 2.0 - 1.0, 1.0, 1.0);
 		float4 cameraRay = mul(_CameraInvProjectionMatrix, clipPos);
 
-		//o.ray = mul(unity_ObjectToWorld, v.vertex);
 		o.ray = cameraRay / cameraRay.w;
 
 		return o;
