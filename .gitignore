@@ -74,6 +74,7 @@ crashlytics-build.properties
 # Avoid License Issue
 Assets/Resources/Models/_Excluded/*
 Assets/Resources/Es Wave Shader/InkPainter/*
+Assets/Standard Assets/*
 
 # vs code
 .vs/*

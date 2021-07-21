@@ -29,7 +29,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Alpha: 1
-    - _Power: 0.82
+    - _Power: 0.42
     - _Scale: 1
     - _Speed: 0.5
     m_Colors: []
+  m_BuildTextureStacks: []
