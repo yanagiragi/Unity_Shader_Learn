@@ -104,4 +104,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Organized/FanboxCard/_Scenes/Line Pattern (smoothStep).unity
     guid: ccf13ebe350161b4dac8df24466717d9
+  - enabled: 1
+    path: Assets/Organized/StippleTransparency/_Scenes/StippleTransparencyDemo.unity
+    guid: b95ccc5c25390f742970f3c36e59442d
   m_configObjects: {}
