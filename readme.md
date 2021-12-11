@@ -1,6 +1,8 @@
 # Unity_Shader_Learn
 
-Unity Version: 2017.2.1f1
+Unity Version: 2020.3.14f1
+
+** This Repo is under construction for now **
 
 <hr />
 
