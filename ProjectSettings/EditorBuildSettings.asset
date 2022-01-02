@@ -12,46 +12,46 @@ EditorBuildSettings:
     path: Assets/_Scenes/MainScene.unity
     guid: db094d32257ccd2488237e4b0b82dfb4
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch6_Lit.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch6_Lit.unity
     guid: 1e27cfdabf6e90e4ca628109e91c55b2
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch7_NM.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch7_NormalMap.unity
     guid: 48d985019e57687439c0e462701180a4
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch8_Transparency.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch8_Transparency.unity
     guid: 2b7ae0edce66cf44aaf6e6f731c47462
   - enabled: 1
-    path: Assets/_Scenes/ShaderBook Ch9/ShadowAlphaTest.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch9_ShadowAlphaTest.unity
     guid: 82247ec6e7c34ea40a79a969d7a709d3
   - enabled: 1
-    path: Assets/_Scenes/ShaderBook Ch9/LightingTest.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch9_LightingTest.unity
     guid: 5870df00a4f43c246bb3ba8b5959f222
   - enabled: 1
-    path: Assets/_Scenes/ShaderBook Ch9/ShadowTest.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch9_ShadowTest.unity
     guid: 0a5ff706a53e53547b7d094c5578ace3
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch10_Fresnel.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch10_Fresnel.unity
     guid: 23e32f61e1ea92047b48d406371e0204
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch11_Sprite.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch11_Sprite.unity
     guid: be42e0925096ea644b637f4b492eecc5
   - enabled: 1
     path: Assets/_Scenes/Sprite Sheets Animation.unity
     guid: 0876b3a5676090448bb337190ae1499c
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch12_PP.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch12_PostProcessing.unity
     guid: a183262e3a2b9f9439b8cf1c39af9ec4
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch13_PPwithDepth.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch13_PostProcessingwithDepth.unity
     guid: bf9c23ed6182faa40b10791773abc9b1
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch14_NPR.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch14_NPR.unity
     guid: 9c269afcb6d4d014fa7f41b180a7bed7
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch15_Dissolve.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch15_Dissolve.unity
     guid: a10a12edc6d2d6c418f3c2ddd364a552
   - enabled: 1
-    path: Assets/_Scenes/Book_Ch17_Extrusion.unity
+    path: Assets/_Wip/ShaderBook_candycat1992/_Scenes/Book_Ch17_Extrusion.unity
     guid: aeb3f723d6f10524eb0fe0a61454137a
   - enabled: 1
     path: Assets/_Scenes/Shield.unity

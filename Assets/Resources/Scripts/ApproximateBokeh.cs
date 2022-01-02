@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(getDepthMap))]
+[RequireComponent(typeof(GetDepthMap))]
 public class ApproximateBokeh : PostEffectsBase {
 
     public Shader Shader;
