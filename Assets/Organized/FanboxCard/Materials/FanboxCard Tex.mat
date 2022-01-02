@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 0.2, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bd2258081b101794fa51d2ae87ac2a84, type: 3}
+        m_Texture: {fileID: 2800000, guid: f376a69a10aa678448a7c5fcc3d499fe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex2:
@@ -57,7 +57,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BlingStrength: 0.15
-    - _Displacement: 0.21372828
+    - _Displacement: 1.334408
     - _DisplacementScalar: 4.45
     - _DisplacementX: 1.315904
     - _DisplacementY: 1.315904
