@@ -2,8 +2,6 @@
 
 Unity Version: 2020.3.14f1
 
-** This Repo is under construction for now **
-
 <hr />
 
 ## Assets Credits:
@@ -57,6 +55,10 @@ Unity Version: 2020.3.14f1
 > [puppet_master的专栏 (CSDN)](https://blog.csdn.net/puppet_master)
 
 > [Bokeh depth of field in a single pass](http://tuxedolabs.blogspot.com/2018/05/bokeh-depth-of-field-in-single-pass.html?m=1)
+
+> [阿祥的開發日常 - Stipple Transparency Shader (Screen-Door Transparency Shader)](https://tedsieblog.wordpress.com/2020/02/13/stipple-transparency-shader-screen-door-transparency-shader/)
+
+> [Unity Stipple Transparency Shader](https://ocias.com/blog/unity-stipple-transparency-shader/)
 
 <br />
 
