@@ -57,7 +57,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BlingStrength: 0.15
-    - _Displacement: 1.334408
+    - _Displacement: 1.3102818
     - _DisplacementScalar: 4.45
     - _DisplacementX: 1.315904
     - _DisplacementY: 1.315904
