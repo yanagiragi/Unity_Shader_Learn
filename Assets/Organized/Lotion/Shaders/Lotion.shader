@@ -1,8 +1,14 @@
-﻿Shader "Custom/Lotion Original" {
+﻿Shader "Custom/Lotion" {
 	Properties{
 		_MainTex("Main Tex", 2D) = "white" {}
 		_LotionMap("Lotion Map", 2D) = "white" {}
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
+		
+		[Toggle(USE_NDOTL_DROPOFF)]
+		_UseNdotLDropOff("Use NdotL Drop Off", float) = 0
+
+		[Toggle(USE_VERSION_TWO)]
+		_UseVersionTwo("Use Version 2", float) = 0
 	}
 
 	SubShader
@@ -15,6 +21,9 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
+
+			#pragma shader_feature USE_NDOTL_DROPOFF
+			#pragma shader_feature USE_VERSION_TWO
 
 			#include "UnityCG.cginc"
 			#include "Lighting.cginc"
@@ -32,7 +41,7 @@
 				float2 uv : TEXCOORD0;
 				fixed3 worldNormal : TEXCOORD1;
 				fixed3 worldPos : TEXCOORD2;
-				float2 sphereUV : TEXCOORD3;
+				float3 sphereUV : TEXCOORD3;
 			};
 
 			fixed4 _Diffuse;
@@ -46,11 +55,10 @@
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				
 				o.worldNormal = mul(v.normal, (float3x3) unity_WorldToObject);
+				o.worldNormal = normalize(o.worldNormal);
 
 				float3 viewNormal = mul(o.worldNormal, (float3x3)UNITY_MATRIX_V);
-				o.sphereUV = viewNormal.xy;
-				o.sphereUV.x = o.sphereUV.x * 0.5f + 0.5f;
-				o.sphereUV.y = o.sphereUV.y * 0.5f + 0.5f;
+				o.sphereUV = normalize(viewNormal.xyz);
 				
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 
@@ -82,10 +90,26 @@
 
 				fixed3 diffuse = _LightColor0.rgb * albedo.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDirection));
 
-				fixed3 LotionColor = tex2D(_LotionMap, i.sphereUV).rgb;
+				float NdotL = saturate(dot(worldNormal, worldLightDirection));
+				float2 sphereUV = (reflect(-worldLightDirection, i.sphereUV));
 
-				fixed3 color = ambient + diffuse + LotionColor;
-			
+				#ifdef USE_VERSION_TWO
+					// Version2
+					sphereUV.x = sphereUV.x * 0.5f + 0.5f;
+					sphereUV.y = sphereUV.y * 0.5f + 0.5f;
+				#endif
+
+				fixed3 LotionColor = tex2D(_LotionMap, sphereUV).rgb;
+
+				fixed3 color = ambient + diffuse;
+
+
+				#ifdef USE_NDOTL_DROPOFF
+					color += LotionColor * NdotL;
+				#else
+					color += LotionColor;
+				#endif
+
 				return fixed4(color, 1.0);
 
 			}

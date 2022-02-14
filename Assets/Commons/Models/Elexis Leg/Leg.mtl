@@ -1,0 +1,28 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl NudeEL.Nude__Elexis_reference.smd.mesh_07
+Ns 143.999983
+Ka 1.000000 1.000000 1.000000
+Kd 0.400000 0.400000 0.400000
+Ks 0.440000 0.440000 0.440000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -bm 0.300000 Body_n.tga
+map_Kd Textures\\Body_2nd.tga
+map_d Textures\\Body_2nd.tga
+
+newmtl NudeEL.Nude__Elexis_reference.smd.mesh_08.002
+Ns 101.823365
+Ka 1.000000 1.000000 1.000000
+Kd 0.400000 0.400000 0.400000
+Ks 0.980000 0.980000 0.980000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -bm 0.300000 Boots_n.tga
+map_Kd Boots_white.tga
+map_d Boots_white.tga

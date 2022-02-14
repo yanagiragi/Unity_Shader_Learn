@@ -57,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Organized/Force Shield/_Scenes/Shield.unity
     guid: f4f3a6da2ff241b4ea620dbc43e28556
   - enabled: 1
-    path: Assets/_Wip/Stockingize/_Scenes/Stockingize.unity
+    path: Assets/Organized/Stockingize/_Scenes/Stockingize.unity
     guid: 196b610c0a68e1f49815feda15c4cce9
   - enabled: 1
     path: Assets/Organized/Retro3D/_Scenes/Retro3D.unity
@@ -66,7 +66,7 @@ EditorBuildSettings:
     path: Assets/Organized/KinoGlitch/_Scenes/KinoGlitch.unity
     guid: f493be0cd3434a14a9a65dff5da20ef6
   - enabled: 1
-    path: Assets/_Wip/Lotion/_Scenes/Lotion.unity
+    path: Assets/Organized/Lotion/_Scenes/Lotion.unity
     guid: 11d78fc5a4425864da95c86564bc6eac
   - enabled: 0
     path: Assets/_Wip/Screen Space Wave Propagation (WIP)/Scenes/Wave Propagation
