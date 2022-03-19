@@ -236,11 +236,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2388a995a3ab11e47bcc1694404a6be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 2116791612}
+  target: {fileID: 2116791612}
   rotateScalar: 10
   isRevertX: 0
   isRevertY: 1
-  material: {fileID: 2100000, guid: b5c7a5db7aec46a4686135726262f649, type: 2}
+  materialRef: {fileID: 2100000, guid: b5c7a5db7aec46a4686135726262f649, type: 2}
+  cardMesh: {fileID: 2116791610}
 --- !u!4 &1801059573
 Transform:
   m_ObjectHideFlags: 0
