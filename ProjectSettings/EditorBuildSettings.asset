@@ -110,4 +110,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Organized/Stipple Transparency/_Scenes/StippleTransparencyDemo.unity
     guid: b95ccc5c25390f742970f3c36e59442d
+  - enabled: 1
+    path: Assets/Organized/Transparent Gaussian Blur/_Scenes/Transparent Gaussian
+      Blur.unity
+    guid: 287789c6302e8a948bce31d1f3baefa2
   m_configObjects: {}
